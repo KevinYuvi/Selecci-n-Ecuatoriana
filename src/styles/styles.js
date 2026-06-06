@@ -13,6 +13,59 @@ export const globalStyles = StyleSheet.create({
     paddingTop: 60,
     width: '100%',
   },
+  headerEquipo: {
+    backgroundColor: '#FFFFFF',
+    marginHorizontal: 15,
+    marginBottom: 25,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    borderRadius: 20,
+    alignItems: 'center',
+    flexDirection: 'row',
+    borderWidth: 2,
+    borderColor: '#FFDD00',
+    shadowColor: '#034EA2',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
+    elevation: 4,
+  },
+
+  logoEquipo: {
+    width: 82,
+    height: 82,
+    resizeMode: 'contain',
+    marginRight: 14,
+  },
+
+  infoEquipo: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+
+  tituloEquipo: {
+    fontSize: 19,
+    fontWeight: '900',
+    color: '#003DA5',
+    textTransform: 'uppercase',
+    letterSpacing: 0.8,
+  },
+
+  lineaAmarillaEquipo: {
+    width: 42,
+    height: 4,
+    backgroundColor: '#FFCC00',
+    marginTop: 7,
+    marginBottom: 7,
+    borderRadius: 2,
+  },
+
+  subtituloEquipo: {
+    fontSize: 13,
+    color: '#003DA5',
+    lineHeight: 18,
+    fontWeight: '800',
+  },
   headerHome: {
     backgroundColor: '#034EA2',
     marginHorizontal: 15,

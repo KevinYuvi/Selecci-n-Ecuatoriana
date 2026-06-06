@@ -1,23 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, View, Image, TouchableOpacity, FlatList, ScrollView } from 'react-native';
 import { globalStyles } from '../styles/styles';
 import { listaJugadores } from '../data/jugadores';
 
 export default function HomeScreen({ onSeleccionarJugador }) {
     const categorias = ['Porteros', 'Defensas', 'Mediocampistas', 'Delanteros'];
+    const [mostrarMensaje, setMostrarMensaje] = useState(false);
 
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
-            {/* Cabecera Principal */}
+            <View style={globalStyles.headerEquipo}>
+                <Image
+                    source={{ uri: "https://www.futbolecuador.com/imagenes/images/thumb640/101b9139276d73fe8ca0730924b00e7c.png" }}
+                    style={globalStyles.logoEquipo}
+                />
+
+                <View style={globalStyles.infoEquipo}>
+                    <Text style={globalStyles.tituloEquipo}>Selección Ecuatoriana de Fútbol</Text>
+                    <View style={globalStyles.lineaAmarillaEquipo} />
+                    <Text style={globalStyles.subtituloEquipo}>
+                        Ecuador - La Tri
+                    </Text>
+                </View>
+            </View>
+
+            <View style={globalStyles.seccionContenedor}>
+                <View style={globalStyles.seccionHeader}>
+                    <Text style={globalStyles.seccionTitulo}>Datos del equipo</Text>
+                    <View style={globalStyles.seccionLinea} />
+                </View>
+
+                <View style={globalStyles.fichaTecnicaContenedor}>
+                    <View style={globalStyles.fichaFila}>
+                        <Text style={globalStyles.fichaLabel}>Confederación</Text>
+                        <Text style={globalStyles.fichaValor}>CONMEBOL</Text>
+                    </View>
+
+                    <View style={globalStyles.fichaFila}>
+                        <Text style={globalStyles.fichaLabel}>Entrenador</Text>
+                        <Text style={globalStyles.fichaValor}>Sebastián Beccacece</Text>
+                    </View>
+
+                    <View style={globalStyles.fichaFilaUltima}>
+                        <Text style={globalStyles.fichaLabel}>Estadio</Text>
+                        <Text style={globalStyles.fichaValor}>Estadio Rodrigo Paz Delgado</Text>
+                    </View>
+                </View>
+            </View>
+
             <View style={globalStyles.headerHome}>
-                <Text style={globalStyles.tituloHome}>Convocados</Text>
+                <Text style={globalStyles.tituloHome}>Jugadores</Text>
                 <View style={globalStyles.lineaAmarilla} />
                 <Text style={globalStyles.subtituloHome}>
-                    La nómina oficial de La Tri para los próximos encuentros internacionales.
+                    La nómina oficial de La Tri para los próximos encuentros del mundial.
                 </Text>
             </View>
 
-            {/* Listas Dinámicas por Posición */}
             {categorias.map((categoria) => {
                 const jugadoresFiltrados = listaJugadores.filter(j => j.categoria === categoria);
 

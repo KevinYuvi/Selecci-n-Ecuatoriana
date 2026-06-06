@@ -17,17 +17,34 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  // 1. Render de la pantalla de carga (Splash)
   if (mostrarSplash) {
     return (
-      <View style={{ flex: 1, backgroundColor: '#fff', justifyContent: 'center', alignItems: 'center' }}>
-        <Image
-          source={{ uri: "https://www.futbolecuador.com/imagenes/images/thumb640/101b9139276d73fe8ca0730924b00e7c.png" }}
-          style={{ width: 340, height: 340, resizeMode: 'contain' }}
-        />
-        <Text style={{ color: 'white', marginTop: 15, fontSize: 15, fontWeight: 'bold', letterSpacing: 4 }}>
-          LA TRI ATHLETIC
+      <View style={{ flex: 1, backgroundColor: '#003DA5', justifyContent: 'center', alignItems: 'center' }}>
+        <View style={{
+          width: 280,
+          height: 280,
+          borderRadius: 140,
+          backgroundColor: '#FFFFFF',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderWidth: 5,
+          borderColor: '#FFCC00',
+          shadowColor: '#000',
+          shadowOffset: { width: 0, height: 6 },
+          shadowOpacity: 0.25,
+          shadowRadius: 10,
+          elevation: 8
+        }}>
+          <Image
+            source={{ uri: "https://www.futbolecuador.com/imagenes/images/thumb640/101b9139276d73fe8ca0730924b00e7c.png" }}
+            style={{ width: 230, height: 230, resizeMode: 'contain' }}
+          />
+        </View>
+
+        <Text style={{ color: '#FFCC00', marginTop: 22, fontSize: 22, fontWeight: '900', letterSpacing: 1 }}>
+          Ecuador - La Tri
         </Text>
+
         <StatusBar style="light" />
       </View>
     );
@@ -40,7 +57,6 @@ export default function App() {
 
   return (
     <View style={[globalStyles.container, { paddingBottom: 20 }]}>
-
       <HomeScreen onSeleccionarJugador={manejarSeleccion} />
 
       <ProfileModal

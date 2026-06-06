@@ -1,4 +1,3 @@
-// Archivo: styles.js
 import { StyleSheet, Dimensions } from 'react-native';
 
 const { width } = Dimensions.get('window');
@@ -10,11 +9,11 @@ export const globalStyles = StyleSheet.create({
   // ==========================================
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF', // Blanco puro para máxima limpieza visual
+    backgroundColor: '#FFFFFF',
     paddingTop: 60,
   },
   headerHome: {
-    backgroundColor: '#034EA2', // AZUL de La Tri como bloque fuerte superior
+    backgroundColor: '#034EA2',
     marginHorizontal: 15,
     marginBottom: 25,
     paddingVertical: 22,
@@ -22,7 +21,7 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     borderWidth: 2,
-    borderColor: '#FFDD00', // AMARILLO enmarcando el encabezado
+    borderColor: '#FFDD00', 
     shadowColor: '#034EA2',
     shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.1,
@@ -32,21 +31,21 @@ export const globalStyles = StyleSheet.create({
   tituloHome: {
     fontSize: 26,
     fontWeight: '900',
-    color: '#FFFFFF', // Texto blanco sobre el bloque azul
+    color: '#FFFFFF',
     textTransform: 'uppercase',
     letterSpacing: 1.5,
   },
   lineaAmarilla: {
     width: 45,
     height: 4,
-    backgroundColor: '#FFDD00', // AMARILLO central
+    backgroundColor: '#FFDD00', 
     marginTop: 8,
     marginBottom: 12,
     borderRadius: 2,
   },
   subtituloHome: {
     fontSize: 13,
-    color: '#E2ECF7', // Azul claro para el subtexto
+    color: '#E2ECF7',
     textAlign: 'center',
     lineHeight: 18,
     fontWeight: '600',
@@ -67,10 +66,10 @@ export const globalStyles = StyleSheet.create({
   seccionTitulo: {
     fontSize: 12,
     fontWeight: '900',
-    color: '#034EA2', // AZUL para el nombre de la sección
+    color: '#034EA2', 
     textTransform: 'uppercase',
     letterSpacing: 1.2,
-    backgroundColor: '#FFF9E6', // Cápsula AMARILLA muy suave de fondo
+    backgroundColor: '#FFF9E6', 
     paddingVertical: 4,
     paddingHorizontal: 10,
     borderRadius: 6,
@@ -80,7 +79,7 @@ export const globalStyles = StyleSheet.create({
   seccionLinea: {
     flex: 1,
     height: 1.5,
-    backgroundColor: '#E2ECF7', // Línea AZUL sutil
+    backgroundColor: '#E2ECF7',
     marginLeft: 10,
   },
   gridColumnas: {
@@ -91,7 +90,7 @@ export const globalStyles = StyleSheet.create({
   // TARJETAS EN REJILLA (DETALLES MARCADOS)
   // ==========================================
   tarjeta: {
-    backgroundColor: '#F9F6EE', // Tu color crema original pasa a las tarjetas para que resalten sobre el fondo blanco
+    backgroundColor: '#F9F6EE', 
     width: cardWidth,
     borderRadius: 18,
     padding: 16,
@@ -106,9 +105,9 @@ export const globalStyles = StyleSheet.create({
     elevation: 2,
   },
   tarjetaSeleccionada: {
-    borderColor: '#ED1C24', // ROJO vibrante al pulsar la tarjeta
+    borderColor: '#ED1C24',
     borderWidth: 2.5,
-    backgroundColor: '#FFF5F5', // Fondo con un sutil toque rojizo
+    backgroundColor: '#FFF5F5', 
   },
   avatarContenedor: {
     position: 'relative',
@@ -119,14 +118,14 @@ export const globalStyles = StyleSheet.create({
     height: 90,
     borderRadius: 45,
     borderWidth: 3,
-    borderColor: '#FFDD00', // Borde AMARILLO en la foto
+    borderColor: '#FFDD00', 
     backgroundColor: '#FFFFFF',
   },
   dorsalContenedor: {
     position: 'absolute',
     bottom: -2,
     right: -2,
-    backgroundColor: '#ED1C24', // ROJO para el bloque del número (look de camiseta)
+    backgroundColor: '#ED1C24', 
     width: 26,
     height: 26,
     borderRadius: 13,
@@ -150,7 +149,7 @@ export const globalStyles = StyleSheet.create({
   posicionJugador: {
     fontSize: 11,
     fontWeight: '750',
-    color: '#034EA2', // AZUL para la posición
+    color: '#034EA2', 
     textTransform: 'uppercase',
     letterSpacing: 0.5,
   },
@@ -168,21 +167,21 @@ export const globalStyles = StyleSheet.create({
   // ==========================================
   modalPantallaCompleta: {
     flex: 1,
-    backgroundColor: '#FFFFFF', // Consistente con el fondo blanco limpio
+    backgroundColor: '#FFFFFF', 
     paddingTop: 50,
   },
   modalHeader: {
     height: 60,
     borderBottomWidth: 2,
-    borderBottomColor: '#FFDD00', // Separador AMARILLO
-    backgroundColor: '#034EA2', // Header AZUL sin botones laterales
+    borderBottomColor: '#FFDD00', 
+    backgroundColor: '#034EA2', 
     justifyContent: 'center', 
     alignItems: 'center', 
   },
   modalTituloHeader: {
     fontSize: 15,
     fontWeight: '900',
-    color: '#FFFFFF', // Centrado e impecable
+    color: '#FFFFFF', 
     letterSpacing: 1.2,
     textTransform: 'uppercase',
     textAlign: 'center',
@@ -197,11 +196,11 @@ export const globalStyles = StyleSheet.create({
     height: 150,
     borderRadius: 75,
     borderWidth: 4,
-    borderColor: '#FFDD00', // Aro AMARILLO
+    borderColor: '#FFDD00', 
     marginBottom: 15,
   },
   badgePosicion: {
-    backgroundColor: '#034EA2', // Badge AZUL fuerte
+    backgroundColor: '#034EA2', 
     paddingVertical: 5,
     paddingHorizontal: 16,
     borderRadius: 20,
@@ -222,7 +221,7 @@ export const globalStyles = StyleSheet.create({
   lineaDetalle: {
     width: 40,
     height: 3,
-    backgroundColor: '#ED1C24', // Detalle en ROJO
+    backgroundColor: '#ED1C24', 
     marginTop: 10,
     marginBottom: 25,
     borderRadius: 1.5,
@@ -233,7 +232,7 @@ export const globalStyles = StyleSheet.create({
   // ==========================================
   fichaTecnicaContenedor: {
     width: '100%',
-    backgroundColor: '#F9F6EE', // Crema suave para la tabla de datos
+    backgroundColor: '#F9F6EE', 
     borderRadius: 20,
     paddingVertical: 4,
     paddingHorizontal: 20,
@@ -264,7 +263,7 @@ export const globalStyles = StyleSheet.create({
   fichaLabel: {
     fontSize: 11,
     fontWeight: '800',
-    color: '#034EA2', // Texto de etiquetas en AZUL
+    color: '#034EA2', 
     textTransform: 'uppercase',
     letterSpacing: 0.5,
   },
@@ -278,7 +277,7 @@ export const globalStyles = StyleSheet.create({
   // BOTÓN CERRAR ÚNICO (PARTE INFERIOR)
   // ==========================================
   botonCerrarModal: {
-    backgroundColor: '#034EA2', // AZUL de La Tri
+    backgroundColor: '#034EA2', 
     width: '100%',
     height: 52,
     borderRadius: 14,
@@ -290,7 +289,7 @@ export const globalStyles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 4,
     borderWidth: 2,
-    borderColor: '#FFDD00', // Toque final con borde AMARILLO
+    borderColor: '#FFDD00', 
   },
   botonCerrarTexto: {
     color: '#FFFFFF',

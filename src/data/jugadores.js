@@ -1,4 +1,3 @@
-// Archivo: jugadores.js
 export const listaJugadores = [
   // --- ARQUEROS ---
   {
@@ -44,12 +43,12 @@ export const listaJugadores = [
     nacionalidad: 'Ecuador'
   },
 
-  // --- DEFENSORES ---
+  // --- Defensas ---
   {
     id: '4',
     nombre: 'Félix Torres',
     posicion: 'Defensa',
-    categoria: 'Defensores',
+    categoria: 'Defensas',
     dorsal: '2',
     foto: 'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRxL7YWkSrHyYlWr9OhTk1VHIwcCJcpEi3nGoqjXrFGJdC5bWj6tUGVI757kdiR3s4YAtj8jEKunJiFVtX3YMFaIkE',
     tag: 'DEFENSA',
@@ -63,7 +62,7 @@ export const listaJugadores = [
     id: '5',
     nombre: 'Piero Hincapié',
     posicion: 'Defensa',
-    categoria: 'Defensores',
+    categoria: 'Defensas',
     dorsal: '3',
     foto: 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRIr6CGshDxXD4jlkbg0PRyws03KqBSykvn5c6oQ200Vcx4CKeD5O32cWodMtVD5YBTJWk5kzhWOt0j4EcizPmifVo',
     tag: 'DEFENSA',
@@ -77,7 +76,7 @@ export const listaJugadores = [
     id: '6',
     nombre: 'Joel Ordóñez',
     posicion: 'Defensa',
-    categoria: 'Defensores',
+    categoria: 'Defensas',
     dorsal: '4',
     foto: 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQ_qlBlEl98NZmEYsPya1tQFr5bwVTyMG1339z2CSGVCKm--9guxO5gCO296DfC_uA1OO0yyfTS8WrlRuFy-7Zykf8',
     tag: 'DEFENSA',
@@ -91,7 +90,7 @@ export const listaJugadores = [
     id: '7',
     nombre: 'Willian Pacho',
     posicion: 'Defensa',
-    categoria: 'Defensores',
+    categoria: 'Defensas',
     dorsal: '6',
     foto: 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR9Ee14GAEWjXl9o8BxIPKANNBEdiWQd0URsU1jb0VZuD5a5xWUwjayNqw7N7rVXV6ZG1mhRoqpBMbfpd6JuBAU758',
     tag: 'DEFENSA',
@@ -105,7 +104,7 @@ export const listaJugadores = [
     id: '8',
     nombre: 'Pervis Estupiñán',
     posicion: 'Defensa',
-    categoria: 'Defensores',
+    categoria: 'Defensas',
     dorsal: '7',
     foto: 'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQrAEg0k-dvMeVqcpJCxLpWqKi5G0Qnhp9kj0aOTSimTB2KsOnADjNeYjErIJBX6pTmQcw5et8N5SonqFLT3CrQ0uw',
     tag: 'DEFENSA',
@@ -119,7 +118,7 @@ export const listaJugadores = [
     id: '9',
     nombre: 'Ángelo Preciado',
     posicion: 'Defensa',
-    categoria: 'Defensores',
+    categoria: 'Defensas',
     dorsal: '17',
     foto: 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQEYc011r1lvbAC2jWJ8shed5s9xgnAKs-nkKjfvwho8dPiz4q5F1qvxLpGPPfNj6OY92yUMVmveZVdCWqwkroVQo8',
     tag: 'DEFENSA',
@@ -133,7 +132,7 @@ export const listaJugadores = [
     id: '10',
     nombre: 'Jackson Porozo',
     posicion: 'Defensa',
-    categoria: 'Defensores',
+    categoria: 'Defensas',
     dorsal: '25',
     foto: 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSE426BkZ-UOIix2-f0XgOaUQ_kC41-XGGnTsjdTmpl_dg08uUouDZHwJvUIdfiB6gy-hUl6DbWb09YX6LLbIYbLKg',
     tag: 'DEFENSA',
@@ -147,7 +146,7 @@ export const listaJugadores = [
     id: '11',
     nombre: 'Yaimar Medina',
     posicion: 'Defensa',
-    categoria: 'Defensores',
+    categoria: 'Defensas',
     dorsal: '26',
     foto: 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTbVNCURFoN02qhyzbgpzDG9nYcuqkrQhy8q7ZOyi4Gztm1a7RYoIOEToP8ir9wO1t2UzW_D5Xp_9-s6XOQVQFC5Rw',
     tag: 'DEFENSA',
@@ -173,7 +172,7 @@ export const listaJugadores = [
     peso: '71 kg',
     nacionalidad: 'Ecuador'
   },
-    {
+  {
     id: '18',
     nombre: 'Anthony Valencia',
     posicion: 'Mediocampista',

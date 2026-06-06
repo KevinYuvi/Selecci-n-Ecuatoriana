@@ -1,16 +1,17 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, Platform } from 'react-native';
 
 const { width } = Dimensions.get('window');
-const cardWidth = (width - 45) / 2;
+const isWeb = Platform.OS === 'web';
+const maxWebWidth = 900;
+const contentWidth = isWeb ? Math.min(width, maxWebWidth) : width;
+const cardWidth = (contentWidth - 45) / 2;
 
 export const globalStyles = StyleSheet.create({
-  // ==========================================
-  // CONTENEDOR GENERAL (FONDO BLANCO DEPORTIVO)
-  // ==========================================
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
     paddingTop: 60,
+    width: '100%',
   },
   headerHome: {
     backgroundColor: '#034EA2',
@@ -21,12 +22,15 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     borderWidth: 2,
-    borderColor: '#FFDD00', 
+    borderColor: '#FFDD00',
     shadowColor: '#034EA2',
     shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.1,
     shadowRadius: 10,
     elevation: 4,
+    width: isWeb ? '92%' : undefined,
+    maxWidth: isWeb ? maxWebWidth : undefined,
+    alignSelf: isWeb ? 'center' : undefined,
   },
   tituloHome: {
     fontSize: 26,
@@ -38,7 +42,7 @@ export const globalStyles = StyleSheet.create({
   lineaAmarilla: {
     width: 45,
     height: 4,
-    backgroundColor: '#FFDD00', 
+    backgroundColor: '#FFDD00',
     marginTop: 8,
     marginBottom: 12,
     borderRadius: 2,
@@ -50,13 +54,12 @@ export const globalStyles = StyleSheet.create({
     lineHeight: 18,
     fontWeight: '600',
   },
-
-  // ==========================================
-  // ESTILOS DE LAS SECCIONES DEL GRID
-  // ==========================================
   seccionContenedor: {
     marginBottom: 25,
     paddingHorizontal: 15,
+    width: isWeb ? '92%' : undefined,
+    maxWidth: isWeb ? maxWebWidth : undefined,
+    alignSelf: isWeb ? 'center' : undefined,
   },
   seccionHeader: {
     flexDirection: 'row',
@@ -66,10 +69,10 @@ export const globalStyles = StyleSheet.create({
   seccionTitulo: {
     fontSize: 12,
     fontWeight: '900',
-    color: '#034EA2', 
+    color: '#034EA2',
     textTransform: 'uppercase',
     letterSpacing: 1.2,
-    backgroundColor: '#FFF9E6', 
+    backgroundColor: '#FFF9E6',
     paddingVertical: 4,
     paddingHorizontal: 10,
     borderRadius: 6,
@@ -85,12 +88,8 @@ export const globalStyles = StyleSheet.create({
   gridColumnas: {
     justifyContent: 'space-between',
   },
-
-  // ==========================================
-  // TARJETAS EN REJILLA (DETALLES MARCADOS)
-  // ==========================================
   tarjeta: {
-    backgroundColor: '#F9F6EE', 
+    backgroundColor: '#F9F6EE',
     width: cardWidth,
     borderRadius: 18,
     padding: 16,
@@ -107,7 +106,7 @@ export const globalStyles = StyleSheet.create({
   tarjetaSeleccionada: {
     borderColor: '#ED1C24',
     borderWidth: 2.5,
-    backgroundColor: '#FFF5F5', 
+    backgroundColor: '#FFF5F5',
   },
   avatarContenedor: {
     position: 'relative',
@@ -118,14 +117,14 @@ export const globalStyles = StyleSheet.create({
     height: 90,
     borderRadius: 45,
     borderWidth: 3,
-    borderColor: '#FFDD00', 
+    borderColor: '#FFDD00',
     backgroundColor: '#FFFFFF',
   },
   dorsalContenedor: {
     position: 'absolute',
     bottom: -2,
     right: -2,
-    backgroundColor: '#ED1C24', 
+    backgroundColor: '#ED1C24',
     width: 26,
     height: 26,
     borderRadius: 13,
@@ -149,7 +148,7 @@ export const globalStyles = StyleSheet.create({
   posicionJugador: {
     fontSize: 11,
     fontWeight: '750',
-    color: '#034EA2', 
+    color: '#034EA2',
     textTransform: 'uppercase',
     letterSpacing: 0.5,
   },
@@ -158,30 +157,42 @@ export const globalStyles = StyleSheet.create({
     marginTop: 8,
     gap: 4,
   },
-  puntoAmarillo: { width: 8, height: 8, borderRadius: 4, backgroundColor: '#FFDD00' },
-  puntoAzul: { width: 8, height: 8, borderRadius: 4, backgroundColor: '#034EA2' },
-  puntoRojo: { width: 8, height: 8, borderRadius: 4, backgroundColor: '#ED1C24' },
-
-  // ==========================================
-  // ESTILOS DEL MODAL PERFIL (SÓLO BOTÓN INFERIOR)
-  // ==========================================
+  puntoAmarillo: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#FFDD00',
+  },
+  puntoAzul: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#034EA2',
+  },
+  puntoRojo: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#ED1C24',
+  },
   modalPantallaCompleta: {
     flex: 1,
-    backgroundColor: '#FFFFFF', 
+    backgroundColor: '#FFFFFF',
     paddingTop: 50,
+    width: '100%',
   },
   modalHeader: {
     height: 60,
     borderBottomWidth: 2,
-    borderBottomColor: '#FFDD00', 
-    backgroundColor: '#034EA2', 
-    justifyContent: 'center', 
-    alignItems: 'center', 
+    borderBottomColor: '#FFDD00',
+    backgroundColor: '#034EA2',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   modalTituloHeader: {
     fontSize: 15,
     fontWeight: '900',
-    color: '#FFFFFF', 
+    color: '#FFFFFF',
     letterSpacing: 1.2,
     textTransform: 'uppercase',
     textAlign: 'center',
@@ -190,17 +201,20 @@ export const globalStyles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 25,
     paddingTop: 30,
+    width: isWeb ? '92%' : undefined,
+    maxWidth: isWeb ? 620 : undefined,
+    alignSelf: isWeb ? 'center' : undefined,
   },
   fotoGrande: {
     width: 150,
     height: 150,
     borderRadius: 75,
     borderWidth: 4,
-    borderColor: '#FFDD00', 
+    borderColor: '#FFDD00',
     marginBottom: 15,
   },
   badgePosicion: {
-    backgroundColor: '#034EA2', 
+    backgroundColor: '#034EA2',
     paddingVertical: 5,
     paddingHorizontal: 16,
     borderRadius: 20,
@@ -221,18 +235,14 @@ export const globalStyles = StyleSheet.create({
   lineaDetalle: {
     width: 40,
     height: 3,
-    backgroundColor: '#ED1C24', 
+    backgroundColor: '#ED1C24',
     marginTop: 10,
     marginBottom: 25,
     borderRadius: 1.5,
   },
-
-  // ==========================================
-  // CONTENEDOR DE LA FICHA TÉCNICA
-  // ==========================================
   fichaTecnicaContenedor: {
     width: '100%',
-    backgroundColor: '#F9F6EE', 
+    backgroundColor: '#F9F6EE',
     borderRadius: 20,
     paddingVertical: 4,
     paddingHorizontal: 20,
@@ -263,7 +273,7 @@ export const globalStyles = StyleSheet.create({
   fichaLabel: {
     fontSize: 11,
     fontWeight: '800',
-    color: '#034EA2', 
+    color: '#034EA2',
     textTransform: 'uppercase',
     letterSpacing: 0.5,
   },
@@ -272,12 +282,8 @@ export const globalStyles = StyleSheet.create({
     fontWeight: '700',
     color: '#121212',
   },
-
-  // ==========================================
-  // BOTÓN CERRAR ÚNICO (PARTE INFERIOR)
-  // ==========================================
   botonCerrarModal: {
-    backgroundColor: '#034EA2', 
+    backgroundColor: '#034EA2',
     width: '100%',
     height: 52,
     borderRadius: 14,
@@ -289,7 +295,7 @@ export const globalStyles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 4,
     borderWidth: 2,
-    borderColor: '#FFDD00', 
+    borderColor: '#FFDD00',
   },
   botonCerrarTexto: {
     color: '#FFFFFF',
